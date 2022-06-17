@@ -27,7 +27,7 @@ object Versions {
     val compileSdk = 30
     val minSdk = 23
     val targetSdk = 30
-    val appCompat = "1.1.0-alpha02"
+    val appCompat = "1.3.0-alpha02"
     val coreKtx = "1.1.0"
     val constraintLayout = "1.1.3"
     val junit = "4.12"
@@ -52,6 +52,8 @@ object Versions {
     val mockk = "1.11.0"
     val fragmentTest = "1.1.0-alpha06"
     val databinding = "3.3.2"
+    val material = "1.4.0"
+    val support = "1.0.0"
 }
 
 object Libraries {
@@ -88,6 +90,8 @@ object AndroidLibraries {
     val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     val navigation = "androidx.navigation:navigation-ui-ktx:${Versions.nav}"
     val navigationFrag = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"
+    val material = "com.google.android.material:material:${Versions.material}"
+    val support = "androidx.legacy:legacy-support-v4:${Versions.support}"
 }
 
 object TestLibraries {

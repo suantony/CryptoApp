@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 apply from: '../android_commons.gradle'
+apply from: '../android_core_dependencies.gradle'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     defaultConfig {
@@ -7,7 +10,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     dataBinding {
-        enabled true
+        enabled false
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
@@ -28,4 +37,6 @@ dependencies {
     implementation AndroidLibraries.appCompat
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
+    implementation AndroidLibraries.support
+    implementation AndroidLibraries.material
 }

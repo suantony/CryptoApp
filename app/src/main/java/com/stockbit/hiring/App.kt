@@ -13,7 +13,9 @@ open class App: Application() {
     // CONFIGURATION ---
     open fun configureDi() =
         startKoin {
-            provideComponent()
+            modules(
+                provideComponent()
+            )
         }
 
     // PUBLIC API ---

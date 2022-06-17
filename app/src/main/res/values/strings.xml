@@ -1,0 +1,10 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_watchlist">Watchlist</string>
+    <string name="title_stream">Stream</string>
+    <string name="title_search">Search</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_portofolio">Portofolio</string>
+</resources>
