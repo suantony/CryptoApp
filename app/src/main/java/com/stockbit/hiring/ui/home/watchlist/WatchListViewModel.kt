@@ -1,13 +1,10 @@
 package com.stockbit.hiring.ui.home.watchlist
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.stockbit.common.base.BaseViewModel
+import com.stockbit.repository.CryptoRepositoryImpl
 
-class WatchListViewModel : ViewModel() {
+class WatchListViewModel(cryptoRepositoryImpl : CryptoRepositoryImpl) : BaseViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is watchlist Fragment"
-    }
-    val text: LiveData<String> = _text
+    var cryptoData = cryptoRepositoryImpl.getCryptoData().asLiveData()
 }

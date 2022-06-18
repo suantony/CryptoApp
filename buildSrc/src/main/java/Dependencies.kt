@@ -54,6 +54,7 @@ object Versions {
     val databinding = "3.3.2"
     val material = "1.4.0"
     val support = "1.0.0"
+    val liveData = "2.4.1"
 }
 
 object Libraries {
@@ -92,6 +93,7 @@ object AndroidLibraries {
     val navigationFrag = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"
     val material = "com.google.android.material:material:${Versions.material}"
     val support = "androidx.legacy:legacy-support-v4:${Versions.support}"
+    val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveData}"
 }
 
 object TestLibraries {

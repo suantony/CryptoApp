@@ -39,4 +39,5 @@ dependencies {
     implementation AndroidLibraries.navigationFrag
     implementation AndroidLibraries.support
     implementation AndroidLibraries.material
+    implementation AndroidLibraries.liveData
 }

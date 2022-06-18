@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 dependencies {
     // KOTLIN
     implementation KotlinLibraries.kotlin
+    implementation KotlinLibraries.kotlinCoroutineCore
     // KOIN
     implementation Libraries.koin
     implementation Libraries.koinViewModel

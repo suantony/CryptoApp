@@ -1,6 +1,6 @@
 package com.stockbit.repository.utils
 
-data class Resource<out T>(val status: Status, val data: T?, val error: Throwable?) {
+data class Resource<out T>(val status: Status, val data: T?, val error: String?) {
     companion object {
         fun <T> success(data: T?): Resource<T> {
             return Resource(
@@ -10,7 +10,7 @@ data class Resource<out T>(val status: Status, val data: T?, val error: Throwabl
             )
         }
 
-        fun <T> error(error: Throwable, data: T?): Resource<T> {
+        fun <T> error(error: String?, data: T?): Resource<T> {
             return Resource(
                 Status.ERROR,
                 data,
@@ -25,11 +25,20 @@ data class Resource<out T>(val status: Status, val data: T?, val error: Throwabl
                 null
             )
         }
+
+        fun <T> empty(data: T?): Resource<T> {
+            return Resource(
+                Status.EMPTY,
+                null,
+                null
+            )
+        }
     }
 
     enum class Status {
         SUCCESS,
         ERROR,
-        LOADING
+        LOADING,
+        EMPTY
     }
 }

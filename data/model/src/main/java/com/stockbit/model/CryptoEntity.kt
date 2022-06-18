@@ -5,13 +5,8 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity
-data class ExampleModel(
-
+data class CryptoEntity (
     @PrimaryKey
     @SerializedName("id")
-    val id: String,
-
-    @SerializedName("name")
-    val name: String
-
+    val id: Int?
 )
